@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "ng build --prod --base-href \"https://sharris4.github.io/StackOverflowQuestionTrivia/\" && angular-cli-ghpages --dir=dist/StackOverflowQuestionTrivia --no-silent --branch gh-pages"
   },
   "private": true,
   "dependencies": {
