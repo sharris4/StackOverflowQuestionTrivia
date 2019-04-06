@@ -1,0 +1,10 @@
+<div>
+  <ul>
+    <li *ngFor="let answer of answers">
+      <p>id: {{answer.answer_id}}</p>
+      <p>body: {{answer.body_markdown}}</p>
+      <p>answers: {{answer.is_accepted}}</p>
+      <p>owner: {{answer.owner.display_name}}</p>
+    </li>
+  </ul>
+</div>

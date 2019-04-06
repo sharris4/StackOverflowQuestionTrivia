@@ -1,0 +1,13 @@
+<div>
+  <p>API Calls Left: {{callsLeft}}</p>
+  <ul>
+    <li *ngFor="let question of questions">
+      <a [routerLink]="['questions', question.question_id]">
+        id: {{question.question_id}}
+      </a>
+      title: {{question.title}}
+      answers: {{question.answer_count}}
+      owner: {{question.owner.display_name}}
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,12 @@
+<div>
+  <p>API Calls Left: {{callsLeft}}</p>
+  <ul>
+    <li *ngFor="let question of questionDetail">
+      <p>title: {{question.title}}</p>
+      <p>answers: {{question.body_markdown}}</p>
+      <p>owner: {{question.owner.display_name}}</p>
+    </li>
+  </ul>
+  <app-answer-list></app-answer-list>
+
+</div>
