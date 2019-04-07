@@ -1,30 +1,12 @@
-<div id="main">
-  <mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <p id="instruction">Select the answer that you think was chosen on Stack Overflow</p>
-    </mat-toolbar-row>
-  </mat-toolbar>
-  <mat-card id="questionCard" *ngFor="let question of questionDetail">
-    <mat-card-header style="display: block;">
-      <div id="header-container">
-        <div style="width: 90px; word-wrap: break-word;">
-          <img mat-card-avatar src="{{question.owner.profile_image}}">
-          <mat-card-title>{{question.owner.display_name}}</mat-card-title>
-        </div>
-        <div style="height: 90%;  align-items: center; justify-content: center; margin-left: 20px;">
-          <div style="display: flex;">
-            <h1>Q:</h1>
-            <h1 style="margin-left: 10px;">
-              <div [innerHTML]="question.title"></div>
-            </h1>
-          </div>
-          <div style="width:95%; align-items: center; justify-content: center;" [innerHTML]="question.body_markdown">
-          </div>
-        </div>
-      </div>
-    </mat-card-header>
-  </mat-card>
-  <mat-divider style="margin-top: 20px; margin-bottom: 20px; border-top-color:rgba(0, 0, 0, 0.12);">
-  </mat-divider>
+<div>
+  <p>API Calls Left: {{callsLeft}}</p>
+  <ul>
+    <li *ngFor="let question of questionDetail">
+      <p>title: {{question.title}}</p>
+      <p>answers: {{question.body_markdown}}</p>
+      <p>owner: {{question.owner.display_name}}</p>
+    </li>
+  </ul>
   <app-answer-list></app-answer-list>
+
 </div>

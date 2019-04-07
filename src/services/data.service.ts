@@ -8,10 +8,10 @@ import { ApiResponse } from 'src/models/api.response.model';
 export class DataService {
   baseUrl = 'https://api.stackexchange.com/2.2/questions';
   // tslint:disable-next-line: max-line-length
-  questionListFilter = '?page=1&pagesize=100&order=desc&sort=activity&site=stackoverflow&filter=!-Kh-Dzmy1zav)bcGuyxnsy4QBbP_wZ-pT';
+  questionListFilter = '?page=1&pagesize=10&fromdate=1554076800&todate=1554336000&order=desc&sort=activity&site=stackoverflow&filter=!-MOlBhqR0jWQqhlU)*FWIbSUx)w6984n5';
   // tslint:disable-next-line: max-line-length
-  questionDetailFilter = '?order=desc&sort=activity&site=stackoverflow&filter=!gB6joeoO-lXk4fd_tX*j-iT6QVMJmQrs0z2';
-  answerListFilter = '/answers?order=desc&sort=activity&site=stackoverflow&filter=!FcbCE4Nr4Y)qnu-DxsGY4xoxSv';
+  questionDetailFilter = '?order=desc&sort=activity&site=stackoverflow&filter=!*1Si8S9*CO9CgElEdOQD77BwhGOZLNjySH))OEUsz';
+  answerListFilter = '/answers?order=desc&sort=activity&site=stackoverflow&filter=!.FjuenCLawYY-G_JTT.xr3hh6sqer';
 
   apiUrl: string;
 
