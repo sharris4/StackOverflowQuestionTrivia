@@ -11,4 +11,3 @@ export class CorrectAnswerFeedbackComponent {
     public dialogRef: MatDialogRef<CorrectAnswerFeedbackComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogResponse) { }
 }
-
