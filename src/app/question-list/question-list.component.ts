@@ -11,6 +11,7 @@ import { ApiResponse } from 'src/models/api.response.model';
 export class QuestionListComponent implements OnInit {
   apiResponse: ApiResponse;
   questions: Question[];
+  acceptedQuestions: Question[] = [];
   callsLeft: number;
 
   constructor(private dataService: DataService) {
@@ -21,6 +22,7 @@ export class QuestionListComponent implements OnInit {
       this.apiResponse = result;
       this.questions = this.apiResponse.items;
       this.callsLeft = this.apiResponse.quota_remaining;
+      this.acceptedQuestions = this.questions.filter(question => question.answer_count >= 2 && question.accepted_answer_id != null);
     });
   }
 

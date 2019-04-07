@@ -1,0 +1,29 @@
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+.nav-link {
+  cursor: pointer;
+}
+
+::ng-deep #title {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+::ng-deep #instruction {
+  flex: 1 1 auto;
+
+  font-size: medium;
+}
+
+::ng-deep #questionCard {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+::ng-deep #header-container {
+  display: flex;
+}
