@@ -6,7 +6,7 @@ import { ApiResponse } from 'src/models/api.response.model';
 
 @Injectable()
 export class DataService {
-  baseUrl = 'https:/api.stackexchange.com/2.2/questions';
+  baseUrl = 'https://api.stackexchange.com/2.2/questions';
   // tslint:disable-next-line: max-line-length
   questionListFilter = '?page=1&pagesize=100&order=desc&sort=activity&site=stackoverflow&filter=!-Kh-Dzmy1zav)bcGuyxnsy4QBbP_wZ-pT';
   // tslint:disable-next-line: max-line-length
