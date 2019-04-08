@@ -1,0 +1,14 @@
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+::ng-deep #answerCard {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+::ng-deep #header-container {
+  display: flex;
+}
