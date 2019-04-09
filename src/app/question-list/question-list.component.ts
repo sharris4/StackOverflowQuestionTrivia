@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Question } from 'src/models/question.model';
 import { DataService } from 'src/services/data.service';
 import { ApiResponse } from 'src/models/api.response.model';
+import { Answer } from 'src/models/answer.model';
+import { QuestionDetail } from 'src/models/question-detail.model';
+import { User } from 'src/models/user.model';
 
 @Component({
   selector: 'app-question-list',
@@ -11,7 +14,9 @@ import { ApiResponse } from 'src/models/api.response.model';
 export class QuestionListComponent implements OnInit {
   apiResponse: ApiResponse;
   questions: Question[];
+  questionDetail: QuestionDetail;
   acceptedQuestions: Question[] = [];
+  answerList: Answer[];
   callsLeft: number;
 
   constructor(private dataService: DataService) {

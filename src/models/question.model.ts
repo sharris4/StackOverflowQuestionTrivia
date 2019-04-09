@@ -6,4 +6,5 @@ export class Question {
     answer_count: number;
     title: string;
     owner: User;
+    //body_markdown: string;
 }

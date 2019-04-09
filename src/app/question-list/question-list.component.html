@@ -1,27 +1,30 @@
 <div id="main">
   <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <p id="instruction">Select a question to see the availble answers</p>
+      <span id="title">
+        Select a question to see the availble answers
+      </span>
     </mat-toolbar-row>
   </mat-toolbar>
   <div id="list">
     <mat-card id="questionCard" *ngFor="let question of acceptedQuestions"
       [routerLink]="['questions', question.question_id]">
-      <mat-card-header style="display: block;">
-        <div id="header-container">
-          <div style="width: 90px; word-wrap: break-word;">
-            <img mat-card-avatar src="{{question.owner.profile_image}}">
-            <mat-card-title>{{question.owner.display_name}}</mat-card-title>
-          </div>
-          <div style="height: 90%; display: flex; align-items: center; justify-content: center; margin-left: 20px;">
-            <h1>Q:</h1>
-            <h3 style="margin-left: 10px">
-              <div [innerHTML]="question.title"></div>
-            </h3>
+      <mat-card-header id="header-container">
+        <div id="user">
+          <img mat-card-avatar src="{{question.owner.profile_image}}">
+          <mat-card-title>{{question.owner.display_name}}</mat-card-title>
+        </div>
+        <div id="question">
+          <h3 style="margin-left: 10px">
+            <div [innerHTML]="question.title"></div>
+          </h3>
+          <div id="answerCount">
+            <mat-icon matBadge="{{question.answer_count}}" matBadgeColor="accent">
+              message
+            </mat-icon>
           </div>
         </div>
       </mat-card-header>
     </mat-card>
   </div>
-  <p>API Calls Left: {{callsLeft}}</p>
 </div>

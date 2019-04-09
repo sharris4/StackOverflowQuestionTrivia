@@ -16,10 +16,9 @@ export class AnswerListComponent implements OnInit {
   apiResponse: ApiResponse;
   answers: Answer[];
   callsLeft: number;
-  router: Router;
   isCorrect: any = true;
 
-  constructor(private dataService: DataService, private route: ActivatedRoute, public dialog: MatDialog) {
+  constructor(private dataService: DataService, private route: ActivatedRoute, public dialog: MatDialog, private router: Router) {
     console.log(this.route.snapshot.paramMap.get('question_id'));
   }
 
@@ -50,9 +49,13 @@ export class AnswerListComponent implements OnInit {
 
     // route back to question list after close
     // use for score keeping?
+    dialogRef.disableClose = true;
+    dialogRef.backdropClick().subscribe(result => {
+      dialogRef.close();
+    });
+
     dialogRef.afterClosed().subscribe(result => {
-      this.isCorrect = result;
-      this.router.navigate(['.']);
+      this.router.navigate([''], { relativeTo: this.route, skipLocationChange: true });
       console.log('The dialog was closed: ' + result);
     }
     );

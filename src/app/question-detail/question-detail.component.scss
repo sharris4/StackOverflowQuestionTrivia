@@ -1,8 +1,12 @@
-@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+::ng-deep #instruction {
+  margin: auto;
+}
 
 ::ng-deep #questionCard {
-  margin-left: 20px;
-  margin-right: 20px;
+  max-width: 1700px;
+  margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
   padding-top: 10px;
@@ -11,4 +15,34 @@
 
 ::ng-deep #header-container {
   display: flex;
+}
+
+::ng-deep #user {
+  width: 90px;
+  margin: auto;
+  word-wrap: break-word;
+}
+
+::ng-deep #question {
+  height: 90%;
+  width: 95%;
+  align-content: center;
+  padding-left: 10px;
+}
+
+::ng-deep #question-title {
+  display: flex;
+  margin-left: 10px;
+}
+
+::ng-deep #question-body {
+  width: 95%;
+  align-items: center;
+  justify-content: center;
+}
+
+::ng-deep #divider {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-top-color: rgba(0, 0, 0, 0.12);
 }

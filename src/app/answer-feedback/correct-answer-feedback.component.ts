@@ -4,7 +4,7 @@ import { DialogResponse } from 'src/models/dialog-response.model';
 
 @Component({
   selector: 'app-correct-answer-feedback',
-  templateUrl: 'correct-answer-feedback.component.html',
+  templateUrl: 'correct-answer-feedback.component.html'
 })
 export class CorrectAnswerFeedbackComponent {
   constructor(

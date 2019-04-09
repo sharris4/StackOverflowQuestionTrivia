@@ -2,16 +2,12 @@
   <mat-card id="answerCard" *ngFor="let answer of answers" (click)="openDialog(answer.is_accepted)">
     <mat-card-header style="display: block;">
       <div id="header-container">
-        <div style="width: 90px; word-wrap: break-word;">
+        <div id="user">
           <img mat-card-avatar src="{{answer.owner.profile_image}}">
           <mat-card-title>{{answer.owner.display_name}}</mat-card-title>
         </div>
-        <div style="height: 90%; display: flex; align-items: center; justify-content: center; margin-left: 20px;">
-          <h1>A:</h1>
-          <div style="margin-left: 10px" [innerHTML]="answer.body_markdown"></div>
-        </div>
+        <div id="answer" [innerHTML]="answer.body_markdown"></div>
       </div>
     </mat-card-header>
   </mat-card>
-  <p>API Calls Left: {{callsLeft}}</p>
 </div>

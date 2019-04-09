@@ -1,14 +1,29 @@
-@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 ::ng-deep #answerCard {
-  margin-left: 20px;
-  margin-right: 20px;
+  max-width: 1700px;
+  margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
   padding-top: 10px;
-  padding-bottom: 0px;
+  padding-bottom: 10px;
 }
 
 ::ng-deep #header-container {
   display: flex;
+}
+
+::ng-deep #user {
+  width: 90px;
+  margin: auto;
+  word-wrap: break-word;
+}
+
+::ng-deep #answer {
+  height: 90%;
+  width: 95%;
+  display: inline-block;
+  display: flex;
+  align-content: center;
+  padding-left: 10px;
 }
