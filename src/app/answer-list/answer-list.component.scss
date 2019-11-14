@@ -1,6 +1,6 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-::ng-deep #answerCard {
+ #answerCard {
   max-width: 1700px;
   margin: auto;
   margin-top: 10px;
@@ -9,17 +9,17 @@
   padding-bottom: 10px;
 }
 
-::ng-deep #header-container {
+ #header-container {
   display: flex;
 }
 
-::ng-deep #user {
+ #user {
   width: 90px;
   margin: auto;
   word-wrap: break-word;
 }
 
-::ng-deep #answer {
+ #answer {
   height: 90%;
   width: 95%;
   display: inline-block;
